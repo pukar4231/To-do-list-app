@@ -1,4 +1,9 @@
 const inputBox = document.getElementById("input-box");
+inputBox.addEventListener("keypress", function(event){
+  if(event.key === "Enter"){
+    addTask();
+  }
+});
 const listcontainer = document.getElementById("list-container");
 function addTask(){
   if(inputBox.value === ''){
@@ -34,4 +39,3 @@ function showtask(){
   listcontainer.innerHTML = localStorage.getItem("data");
 }
  showtask();
- 
